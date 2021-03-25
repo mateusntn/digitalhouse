@@ -63,3 +63,12 @@ const addDog = (name, age, tutor, vaccinated) => {
         vaccinated: `${vaccinated}`,
     });
 }
+
+const giveShower = (dog) => {
+    const now = new Date();
+    dog.services.push({
+        typeServ: 'banho',
+        date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    });
+    console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} tomou banho!`)
+}
