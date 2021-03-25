@@ -33,3 +33,14 @@ const vaccinateDog = (dog) => {
         console.log(`O cachorro ${dog.name} já tinha sido vacinado`);
     }
 };
+
+const vaccineCampaign = () => {
+    let numberDogsVaccinated = 0;
+    for (let dog of dogs) {
+        if(dog.vaccinated == false) {      
+            dog.vaccinated = true;
+            numberDogsVaccinated ++;
+        }
+    }
+    console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`)
+};
