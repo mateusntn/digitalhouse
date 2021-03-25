@@ -81,3 +81,12 @@ const shear = (dog) => {
     });
     console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} foi tosado!`);
 }
+
+const trimNail = (dog) => {
+    const now = new Date();
+    dog.services.push({
+        typeServ: 'corte de unha',
+        date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    });
+    console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} aparou as unhas!`);
+}
