@@ -22,7 +22,7 @@ const dogs = [
         name: 'Coragem',
         age: 8,
         tutor: 'Eustácio',
-        vaccinated: true,
+        vaccinated: false,
         services: [
             { typeServ: 'banho', date: '03/07/2021'},
         ]
@@ -54,3 +54,12 @@ const vaccineCampaign = () => {
     }
     console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`)
 };
+
+const addDog = (name, age, tutor, vaccinated) => {
+    dogs.push({
+        name: `${name}`,
+        age: `${age}`,
+        tutor: `${tutor}`,
+        vaccinated: `${vaccinated}`,
+    });
+}
