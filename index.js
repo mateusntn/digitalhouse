@@ -25,4 +25,11 @@ const listDogs = () => {
     }
 };
 
-listDogs();
+const vaccinateDog = (dog) => {
+    if(dog.vaccinated == false) {
+        dog.vaccinated = true;
+        console.log(`O cachorro ${dog.name} foi vacinado`);
+    } else {
+        console.log(`O cachorro ${dog.name} já tinha sido vacinado`);
+    }
+};
