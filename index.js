@@ -70,5 +70,14 @@ const giveShower = (dog) => {
         typeServ: 'banho',
         date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     });
-    console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} tomou banho!`)
+    console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} tomou banho!`);
+}
+
+const shear = (dog) => {
+    const now = new Date();
+    dog.services.push({
+        typeServ: 'tosa',
+        date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+    });
+    console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} foi tosado!`);
 }
