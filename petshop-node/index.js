@@ -33,6 +33,7 @@ const addDog = (name, age, tutor, isVaccinated) => {
         age: age,
         tutor: tutor,
         isVaccinated: isVaccinated,
+        services: [],
     });
 }
 
