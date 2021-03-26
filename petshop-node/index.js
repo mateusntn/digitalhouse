@@ -57,10 +57,10 @@ const vaccineCampaign = () => {
 
 const addDog = (name, age, tutor, isVaccinated) => {
     dogs.push({
-        name: `${name}`,
-        age: `${age}`,
-        tutor: `${tutor}`,
-        isVaccinated: `${isVaccinated}`,
+        name: name,
+        age: age,
+        tutor: tutor,
+        isVaccinated: isVaccinated,
     });
 }
 
