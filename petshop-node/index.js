@@ -1,33 +1,5 @@
-const dogs = [
-    {
-        name: 'boltz',
-        age: 3,
-        tutor: 'junior',
-        isVaccinated: true,
-        services: [
-            { typeServ: 'banho', date: '02/15/2021'},
-            { typeServ: 'tosa', date: '02/15/2021'}
-        ]
-    },
-    {
-        name: 'Kiara',
-        age: 5,
-        tutor: 'Igor',
-        isVaccinated: true,
-        services: [
-            { typeServ: 'tosa', date: '01/27/2021'}
-        ]
-    },
-    {
-        name: 'Coragem',
-        age: 8,
-        tutor: 'Eustácio',
-        isVaccinated: false,
-        services: [
-            { typeServ: 'banho', date: '03/07/2021'},
-        ]
-    }
-];
+const database = require('./database.json'); 
+let dogs = database.dogs;
 
 const listDogs = () => {
     for(let dog of dogs) {
