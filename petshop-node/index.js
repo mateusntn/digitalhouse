@@ -3,7 +3,7 @@ const dogs = [
         name: 'boltz',
         age: 3,
         tutor: 'junior',
-        vaccinated: true,
+        isVaccinated: true,
         services: [
             { typeServ: 'banho', date: '02/15/2021'},
             { typeServ: 'tosa', date: '02/15/2021'}
@@ -13,7 +13,7 @@ const dogs = [
         name: 'Kiara',
         age: 5,
         tutor: 'Igor',
-        vaccinated: true,
+        isVaccinated: true,
         services: [
             { typeServ: 'tosa', date: '01/27/2021'}
         ]
@@ -22,7 +22,7 @@ const dogs = [
         name: 'Coragem',
         age: 8,
         tutor: 'Eustácio',
-        vaccinated: false,
+        isVaccinated: false,
         services: [
             { typeServ: 'banho', date: '03/07/2021'},
         ]
@@ -31,13 +31,13 @@ const dogs = [
 
 const listDogs = () => {
     for(let dog of dogs) {
-        console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.vaccinated ? 'já foi': 'não foi'} vacinado`);
+        console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.isVaccinated ? 'já foi': 'não foi'} vacinado`);
     }
 };
 
 const vaccinateDog = (dog) => {
-    if(dog.vaccinated == false) {
-        dog.vaccinated = true;
+    if(dog.isVaccinated == false) {
+        dog.isVaccinated = true;
         console.log(`O cachorro ${dog.name} foi vacinado`);
     } else {
         console.log(`O cachorro ${dog.name} já tinha sido vacinado`);
@@ -47,20 +47,20 @@ const vaccinateDog = (dog) => {
 const vaccineCampaign = () => {
     let numberDogsVaccinated = 0;
     for (let dog of dogs) {
-        if(dog.vaccinated == false) {      
-            dog.vaccinated = true;
+        if(dog.isVaccinated == false) {      
+            dog.isVaccinated = true;
             numberDogsVaccinated ++;
         }
     }
     console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`)
 };
 
-const addDog = (name, age, tutor, vaccinated) => {
+const addDog = (name, age, tutor, isVaccinated) => {
     dogs.push({
         name: `${name}`,
         age: `${age}`,
         tutor: `${tutor}`,
-        vaccinated: `${vaccinated}`,
+        isVaccinated: `${isVaccinated}`,
     });
 }
 
