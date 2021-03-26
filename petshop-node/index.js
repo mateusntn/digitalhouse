@@ -62,3 +62,7 @@ const trimNail = (dog) => {
     });
     console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} aparou as unhas!`);
 }
+
+const serveCostumer = (dog, service) => {
+    service(dog);
+}
