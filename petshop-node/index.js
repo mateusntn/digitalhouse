@@ -79,5 +79,7 @@ const trimNail = (dog) => {
 }
 
 const serveCostumer = (dog, service) => {
+    console.log(`Olá ${dog.name}!`);
     service(dog);
+    console.log(`Tchau ${dog.name}, volte sempre!`);
 }
