@@ -35,6 +35,7 @@ const addDog = (name, age, tutor, isVaccinated) => {
         isVaccinated: isVaccinated,
         services: [],
     });
+    console.log(`${name} foi adicionado com sucesso`);
 }
 
 const giveShower = (dog) => {
