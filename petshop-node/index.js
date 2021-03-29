@@ -3,6 +3,11 @@ const fs = require('fs');
 let database = fs.readFileSync(databasePath);
 database = JSON.parse(database);
 
+const saveData = () => {
+    const newDatabase = JSON.stringify(database, null, 2);
+    fs.writeFileSync(databasePath, newDatabase, 'utf-8');
+}
+
 const listDogs = () => {
     for(let dog of database.dogs) {
         console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.isVaccinated ? 'já foi': 'não foi'} vacinado`);
@@ -16,6 +21,7 @@ const vaccinateDog = (dog) => {
     } else {
         console.log(`O cachorro ${dog.name} já tinha sido vacinado`);
     }
+    saveData();
 };
 
 const vaccineCampaign = () => {
@@ -26,7 +32,8 @@ const vaccineCampaign = () => {
             numberDogsVaccinated ++;
         }
     }
-    console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`)
+    console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`);
+    saveData();
 };
 
 const addDog = (name, age, tutor, isVaccinated) => {
@@ -38,6 +45,7 @@ const addDog = (name, age, tutor, isVaccinated) => {
         services: [],
     });
     console.log(`${name} foi adicionado com sucesso`);
+    saveData();
 }
 
 const giveShower = (dog) => {
@@ -47,6 +55,7 @@ const giveShower = (dog) => {
         date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     });
     console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} tomou banho!`);
+    saveData();
 }
 
 const shear = (dog) => {
@@ -56,6 +65,7 @@ const shear = (dog) => {
         date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     });
     console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} foi tosado!`);
+    saveData();
 }
 
 const trimNail = (dog) => {
@@ -65,6 +75,7 @@ const trimNail = (dog) => {
         date: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
     });
     console.log(`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()} : ${dog.name} aparou as unhas!`);
+    saveData();
 }
 
 const serveCostumer = (dog, service) => {
