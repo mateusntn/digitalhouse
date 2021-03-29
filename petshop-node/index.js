@@ -1,8 +1,10 @@
-const database = require('./database.json'); 
-let dogs = database.dogs;
+const databasePath = './database.json'
+const fs = require('fs');
+let database = fs.readFileSync(databasePath);
+database = JSON.parse(database);
 
 const listDogs = () => {
-    for(let dog of dogs) {
+    for(let dog of database.dogs) {
         console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.isVaccinated ? 'já foi': 'não foi'} vacinado`);
     }
 };
@@ -18,7 +20,7 @@ const vaccinateDog = (dog) => {
 
 const vaccineCampaign = () => {
     let numberDogsVaccinated = 0;
-    for (let dog of dogs) {
+    for (let dog of database.dogs) {
         if(dog.isVaccinated == false) {      
             dog.isVaccinated = true;
             numberDogsVaccinated ++;
@@ -28,7 +30,7 @@ const vaccineCampaign = () => {
 };
 
 const addDog = (name, age, tutor, isVaccinated) => {
-    dogs.push({
+    database.dogs.push({
         name: name,
         age: age,
         tutor: tutor,
