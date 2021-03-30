@@ -10,7 +10,14 @@ const saveData = () => {
 
 const listDogs = () => {
     database.dogs.forEach((dog) => {
-        console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.isVaccinated ? 'já foi': 'não foi'} vacinado`);
+        let {tutor, name, age, isVaccinated, services} = dog;
+        console.log(`O cachorro do ${tutor}, se chama ${name}, tem ${age} anos e ${isVaccinated ? 'já foi': 'não foi'} vacinado`);
+
+        services.forEach((service) => {
+            let {date, typeServ} = service;
+            console.log(`${date} - ${typeServ}`);
+        });
+        console.log('-------------------');
     });
 };
 
