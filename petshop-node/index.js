@@ -9,9 +9,9 @@ const saveData = () => {
 }
 
 const listDogs = () => {
-    for(let dog of database.dogs) {
+    database.dogs.forEach((dog) => {
         console.log(`O cachorro do ${dog.tutor}, se chama ${dog.name}, tem ${dog.age} anos e ${dog.isVaccinated ? 'já foi': 'não foi'} vacinado`);
-    }
+    });
 };
 
 const vaccinateDog = (dog) => {
