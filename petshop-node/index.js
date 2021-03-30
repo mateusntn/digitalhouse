@@ -83,3 +83,10 @@ const serveCostumer = (dog, service) => {
     service(dog);
     console.log(`Tchau ${dog.name}, volte sempre!`);
 }
+
+const findDog = (wantedDog) => {
+    const found = database.dogs.find(function(dog){
+        return dog.name === wantedDog;
+    });
+    return found ? found : `Nenhum pet encontrado com o nome ${wantedDog}`;
+}
