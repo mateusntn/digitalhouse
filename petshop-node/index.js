@@ -97,3 +97,11 @@ const findDog = (wantedDog) => {
     });
     return found ? found : `Nenhum pet encontrado com o nome ${wantedDog}`;
 }
+
+const filterByAge = (age1, age2) => {
+    let foundDogs = database.dogs.filter((dog) => {
+        return dog.age >= age1 && dog.age <= age2;
+    });
+
+    return foundDogs;
+}
