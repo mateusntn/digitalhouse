@@ -26,14 +26,14 @@ const vaccinateDog = (dog) => {
 
 const vaccineCampaign = () => {
     let numberDogsVaccinated = 0;
-    for (let dog of database.dogs) {
-        if(dog.isVaccinated == false) {      
-            dog.isVaccinated = true;
+    database.dogs = database.dogs.map((dog) => {
+        if(!dog.isVaccinated) {      
+            vaccinateDog(dog);
             numberDogsVaccinated ++;
         }
-    }
+        return dog;
+    });
     console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`);
-    saveData();
 };
 
 const addDog = (name, age, tutor, isVaccinated) => {
