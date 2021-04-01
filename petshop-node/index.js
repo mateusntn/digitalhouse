@@ -105,3 +105,13 @@ const filterByAge = (age1, age2) => {
 
     return foundDogs;
 }
+
+const premiumCustomer = (dog) => {
+    let { name, services } = dog;
+
+    if (services.length > 5) {
+        console.log(`Olá, ${name}! Você é um cliente especial e ganhou um descontão!`);
+    } else {
+        console.log(`Olá, ${name}! Você ainda não tem descontos disponiveis!\nPara obter descontos é necessário ter realizado mais de 5 serviços.`);
+    }
+}
