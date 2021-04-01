@@ -43,11 +43,12 @@ const vaccineCampaign = () => {
     console.log(`${numberDogsVaccinated} cachorros foram vacinados nessa campanha!!`);
 };
 
-const addDog = (name, age, tutor, isVaccinated) => {
+const addDog = (name, age, tutor, contact, isVaccinated) => {
     database.dogs.push({
         name: name,
         age: age,
         tutor: tutor,
+        contact: contact,
         isVaccinated: isVaccinated,
         services: [],
     });
