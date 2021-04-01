@@ -124,3 +124,14 @@ const contactTutor = (dog) => {
         dog.contact,
     ];
 }
+
+const filterTutor = (nameTutor) => {
+    let dogsTutor = database.dogs.filter((dog) => {
+        return dog.tutor == nameTutor;
+    });
+
+    console.log(`Dogs do tutor ${nameTutor}:`)
+    dogsTutor.forEach((dog) => {
+        console.log(`${dog.nome} - ${dog.tipo}`)
+    })
+} 
