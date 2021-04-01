@@ -116,3 +116,11 @@ const premiumCustomer = (dog) => {
         console.log(`Olá, ${name}! Você ainda não tem descontos disponiveis!\nPara obter descontos é necessário ter realizado mais de 5 serviços.`);
     }
 }
+
+const contactTutor = (dog) => {
+    return [
+        dog.name,
+        dog.tutor,
+        dog.contact,
+    ];
+}
