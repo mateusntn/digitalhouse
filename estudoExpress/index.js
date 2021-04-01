@@ -39,10 +39,17 @@ app.put('/projects/:id', (req, res) => {
 });
 
 app.delete('/projects/:id', (req, res) => {
-    return res.json([
-        'Projeto 50',
-        'Projeto 2',
-    ])
+    const { id } = req.params;
+
+    const projectIndex = projects.findIndex(project => project.id === id);
+
+    if (projectIndex < 0) {
+        return res.status(400).json({error: 'Projeto não foi encontrado'});
+    }
+
+    projects.splice(projectIndex, 1);
+
+    return res.status(204).send();
 });
 
 app.listen(3000);
