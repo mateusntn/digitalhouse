@@ -1,0 +1,54 @@
+{
+  "dogs": [
+    {
+      "name": "boltz",
+      "age": 3,
+      "tutor": "junior",
+      "contact": "81984238621",
+      "isVaccinated": true,
+      "services": [
+        {
+          "typeServ": "banho",
+          "date": "02/15/2021"
+        },
+        {
+          "typeServ": "tosa",
+          "date": "02/15/2021"
+        }
+      ]
+    },
+    {
+      "name": "Kiara",
+      "age": 5,
+      "tutor": "Igor",
+      "contact": "81984238621",
+      "isVaccinated": true,
+      "services": [
+        {
+          "typeServ": "tosa",
+          "date": "01/27/2021"
+        }
+      ]
+    },
+    {
+      "name": "Coragem",
+      "age": 8,
+      "tutor": "Eustácio",
+      "contact": "81984238621",
+      "isVaccinated": false,
+      "services": [
+        {
+          "typeServ": "banho",
+          "date": "03/07/2021"
+        }
+      ]
+    },
+    {
+      "name": "Scooby",
+      "age": 3,
+      "tutor": "Salsicha",
+      "isVaccinated": true,
+      "services": []
+    }
+  ]
+}
