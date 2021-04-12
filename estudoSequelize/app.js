@@ -14,21 +14,12 @@ const listByPk = (table, id) => {
     });
 }
 
-const createUser = (name, email, password) => {
-    Usuario.create({
-        nome: name,
-        email: email,
-        senha: password
-    });
+const createUser = (users) => {
+    Usuario.bulkCreate(users);
 }
 
-const createPost = (text, path, likes, userId) => {
-    Post.create({
-        texto: text,
-        img: path,
-        n_likes: likes,
-        usuarios_id: userId
-    });
+const createPost = (posts) => {
+    Post.bulkCreate(posts);
     
 }
 
