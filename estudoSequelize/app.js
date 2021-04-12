@@ -3,7 +3,8 @@ const { Op } = require('sequelize');
 
 const list = (table, conditions) => {
     table.findAll(conditions).then((result) => {
-        console.table(result.map(unity => unity.toJSON()))
+        console.table(result.map(unity => unity.toJSON()));
+        sequelize.close();
     });
 }
 
@@ -11,6 +12,7 @@ const listByPk = (table, id, conditions) => {
     table.findByPk(id, conditions)
     .then((result) => {
         console.log(result.toJSON());
+        sequelize.close();
     });
 }
 
