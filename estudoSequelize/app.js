@@ -35,3 +35,7 @@ const createPost = (text, path, likes, userId) => {
 const update = (table, change, conditions) => {
     table.update(change, conditions);
 }
+
+const destroy = (table, conditions) => {
+    table.destroy(conditions);
+}
