@@ -31,3 +31,7 @@ const createPost = (text, path, likes, userId) => {
     });
     
 }
+
+const update = (table, change, conditions) => {
+    table.update(change, conditions);
+}
