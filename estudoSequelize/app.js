@@ -13,3 +13,11 @@ const listByPk = (table, id) => {
         console.table(result.toJSON());
     });
 }
+
+const createUser = (name, email, password) => {
+    Usuario.create({
+        nome: name,
+        email: email,
+        senha: password
+    });
+}
