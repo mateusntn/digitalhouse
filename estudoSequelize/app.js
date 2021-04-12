@@ -21,3 +21,13 @@ const createUser = (name, email, password) => {
         senha: password
     });
 }
+
+const createPost = (text, path, likes, userId) => {
+    Post.create({
+        texto: text,
+        img: path,
+        n_likes: likes,
+        usuarios_id: userId
+    });
+    
+}
