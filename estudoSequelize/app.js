@@ -7,10 +7,10 @@ const list = (table, conditions) => {
     });
 }
 
-const listByPk = (table, id) => {
-    table.findByPk(id)
+const listByPk = (table, id, conditions) => {
+    table.findByPk(id, conditions)
     .then((result) => {
-        console.table(result.toJSON());
+        console.log(result.toJSON());
     });
 }
 
