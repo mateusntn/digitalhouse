@@ -19,7 +19,35 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 800px;
-    padding: 25px 50px 70px 50px;
+    height: 1000px;
+    padding: 25px 60px 70px 60px;
 }
 
+.banner,
+.banner .banner-img {
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+}
+
+.button-arrow {
+    background: rgba(141, 141, 141, 0.62);
+    position: relative;
+    width: 55px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-arrow.-left {
+    left: 70px;
+}
+
+.button-arrow.-right {
+    right: 70px;
+}
