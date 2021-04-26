@@ -139,9 +139,21 @@ main {
 .categorys {
     width: 100%;
     margin-top: 20px;
-    padding: 40px 0;
-    color: #FFF;
-    opacity: 0.6;
+    height: 100px;
+    position: relative;
+
+}
+
+.categorys h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    color: #fff;
+    line-height: 100px;
 }
 
 .categorys.-industrial {
