@@ -144,3 +144,29 @@ main {
     background-image: url(../img/Rectangle13.svg);
     background-size: cover;
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: var(--preto);
+}
+
+footer .map {
+    width: 400px;
+}
+
+footer article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFF;
+}
+
+footer article div p {
+    margin-bottom: 10px;
+}
+
+.social-icons img:nth-child(2) {
+    margin: 0 25px;
+}
