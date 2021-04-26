@@ -35,6 +35,20 @@ main {
     padding: 25px 60px 70px 60px;
 }
 
+.button-darkmode {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(94, 94, 94);
+    transition: all linear 0.1s;
+}
+
+.button-darkmode:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
 .banner,
 .banner-img {
     width: 100%;
@@ -80,7 +94,7 @@ main {
     width: 100%;
 }
 
-.products article .descricao {
+.descricao {
     background-color: var(--cinzaClaro);
     text-align: justify;
     padding: 15px;
@@ -169,4 +183,13 @@ footer article div p {
 
 .social-icons img:nth-child(2) {
     margin: 0 25px;
+}
+
+.body-darkmode {
+    background-color: #181818;
+    color: #FFF;
+}
+
+.darkmode {
+    background-color: #000;
 }
