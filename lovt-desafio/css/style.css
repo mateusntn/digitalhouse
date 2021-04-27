@@ -197,6 +197,63 @@ footer article div p {
     margin: 0 25px;
 }
 
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0,0,0,.3);
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40%;
+    min-width: 300px;
+    padding: 40px;
+    position: relative;
+}
+
+.modal-content form input {
+    width: 90%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cinzaEscuro);
+    padding-left: 20px;
+}
+
+.modal-content form .subscribe {
+    background-color: rgb(61, 190, 130);
+    cursor: pointer;
+}
+
+.modal-content .close {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    height: 30px;
+    width: 30px;
+    top: -10px;
+    right: -10px;
+    background-color: var(--preto);
+    color: #fff;
+    font-family: monospace;
+    font-size: 20px;
+}
+
 .darkmode {
     background-color: #181818;
     color: #FFF;
