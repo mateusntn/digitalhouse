@@ -236,7 +236,15 @@ footer article div p {
 
 .modal-content form .subscribe {
     background-color: rgb(61, 190, 130);
+    color: white;
+    
     cursor: pointer;
+    width: 90%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cinzaEscuro);
+    padding: 0 10px;
 }
 
 .modal-content .close {
