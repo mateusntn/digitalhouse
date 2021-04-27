@@ -132,8 +132,9 @@ main {
     font-size: 25px;
 }
 
-.styles h2 {
+.subtitle {
     color: var(--cinzaEscuro);
+    font-size: 30px;
 }
 
 .categorys {
@@ -170,6 +171,41 @@ main {
     background-image: url(../img/Rectangle13.svg);
     background-size: cover;
 }
+
+.contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact form {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 300px;
+    max-width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 16px;
+}
+
+.contact form button {
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    background-color: #DC9730;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Ropa Sans', sans-serif;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
 
 footer {
     display: flex;
